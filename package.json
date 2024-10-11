@@ -1,0 +1,28 @@
+{
+  "name": "example-cognito",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Add Passage passkey login to an AWS Cognito application",
+  "keywords": [],
+  "author": "Passage Identity, Inc.",
+  "scripts": {
+    "build:lambdas": "npm-run-all build:define-auth-challenge build:create-auth-challenge build:verify-auth-challenge",
+    "build:define-auth-challenge": "cd lambdas/define-auth-challenge && npm install && npm run build",
+    "build:create-auth-challenge": "cd lambdas/create-auth-challenge && npm install && npm run build",
+    "build:verify-auth-challenge": "cd lambdas/verify-auth-challenge && npm install && npm run build",
+    "postinstall": "npm run install:server && npm run install:app",
+    "install:server": "cd server && npm install",
+    "install:app": "cd app && npm install",
+    "env": "npm-run-all env:server env:app",
+    "env:server": "cd server && cp .env.example .env",
+    "env:app": "cd app && cp .env.example .env",
+    "start": "npm-run-all --parallel start:server start:app",
+    "start:server": "cd server && npm start",
+    "start:app": "cd app && npm start",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3"
+  }
+}
