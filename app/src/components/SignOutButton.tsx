@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
-import { signOutUser } from '../cognito';
 import { useNavigate } from 'react-router-dom';
+import { signOutUser } from '../cognito';
 
 interface ISignOutProps {
   accessToken: string;
@@ -25,7 +25,7 @@ export function SignOutButton({ accessToken, setAccessToken }: ISignOutProps) {
   };
 
   return (
-    <Button variant="outline-dark" className="m-1" onClick={signOut}>
+    <Button variant='outline-dark' className='m-1' onClick={signOut}>
       Sign out
     </Button>
   );
