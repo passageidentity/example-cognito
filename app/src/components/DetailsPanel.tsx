@@ -1,6 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Col, Row, Table } from 'react-bootstrap';
 import { CognitoJwtVerifier } from 'aws-jwt-verify';
-import { useEffect, useState } from 'react';
 
 interface IDetailsPanelProps {
   accessToken: string;
@@ -24,9 +24,9 @@ export function DetailsPanel({ accessToken }: IDetailsPanelProps) {
   });
 
   return (
-    <Row className="mt-5">
+    <Row className='mt-5'>
       <Col>
-        <h2 className="text-center mb-4">Access token details</h2>
+        <h2 className='text-center mb-4'>Access token details</h2>
 
         <Table striped bordered hover>
           <tbody>

@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react';
-import { signUpUser } from '../cognito';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { signUpUser } from '../cognito';
 
 export function SignUp() {
   const navigate = useNavigate();
@@ -21,23 +21,23 @@ export function SignUp() {
   };
 
   return (
-    <Row className="mt-5">
+    <Row className='mt-5'>
       <Col>
-        <h2 className="text-center mb-4">Sign up a new user</h2>
+        <h2 className='text-center mb-4'>Sign up a new user</h2>
 
         <Form onSubmit={signUp}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Form.Control type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className='mb-3' controlId='formBasicPassword'>
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <Form.Control type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
           </Form.Group>
 
-          <Container className="text-center">
-            <Button variant="dark" type="submit">
+          <Container className='text-center'>
+            <Button variant='dark' type='submit'>
               Sign up
             </Button>
           </Container>
