@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.669.0",
+    "@passageidentity/passage-flex-js": "^0.2.1",
+    "aws-jwt-verify": "^4.0.1",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
+  }
+}
