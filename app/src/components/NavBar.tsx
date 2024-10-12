@@ -32,7 +32,7 @@ export function NavBar({ accessToken, setAccessToken }: INavBarProps) {
 
   return (
     <Navbar expand='lg' className='bg-body-tertiary'>
-      <Container fluid>
+      <Container fluid className='gap-4'>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse className='justify-content-end'>
           {accessToken ? Authenticated : Unauthenticated}

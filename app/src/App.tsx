@@ -17,26 +17,30 @@ export default function App() {
     <BrowserRouter>
       <NavBar accessToken={accessToken} setAccessToken={setAccessToken} />
 
-      <Container className='px-0'>
+      <Container className='px-0 d-flex flex-column justify-content-center align-items-center'>
         <Row>
-          <img src={passageLogo} className='mx-auto mt-5' alt='Passage logo' height='200' />
+          <img src={passageLogo} className='mx-auto mt-5' alt='Passage logo' height='75' />
         </Row>
-        <Row className='mt-5 pt-5'>
-          <Col className='d-flex flex-column align-items-center'>
-            <div className='d-flex justify-content-center mb-4'>
-              <img src={flexLogo} className='mx-3' alt='Passage logo' height='100' />
-              <img src={cognitoLogo} className='mx-3' alt='Cognito logo' height='100' />
+        <Row>
+          <div className='d-flex justify-content-center mt-5'>
+            <img src={flexLogo} className='mx-3' alt='Passage logo' height='50' />
+            <img src={cognitoLogo} className='mx-3' alt='Cognito logo' height='50' />
+            <div>
+              <h1 className='fw-bold'>Passkey Flex + AWS Cognito</h1>
             </div>
-            <h1>Passkey Flex + AWS Cognito</h1>
-
+          </div>
+        </Row>
+        <Row className='mt-4 w-75 d-flex flex-column flex-md-row mt-md-4'>
+          <Col className='d-flex align-items-center'>
+            {accessToken ? <DetailsPanel accessToken={accessToken} /> : <InfoPanel />}
+          </Col>
+          <Col className='d-flex align-items-center'>
             <Routes>
               <Route path='/signup' element={<SignUp />} />
               <Route path='/signin' element={<SignIn setAccessToken={setAccessToken} />} />
               <Route path='/' element={<SignUp />} />
             </Routes>
           </Col>
-
-          <Col>{accessToken ? <DetailsPanel accessToken={accessToken} /> : <InfoPanel />}</Col>
         </Row>
       </Container>
     </BrowserRouter>

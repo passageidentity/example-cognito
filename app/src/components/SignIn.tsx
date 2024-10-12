@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
-import { Row, Col, Form, Button, Container } from 'react-bootstrap';
+import { Row, Form, Button, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContainer } from './AuthContainer';
 import { signInWithPasskey, signInWithPassword } from '../cognito';
 
 interface ISignInProps {
@@ -35,8 +36,8 @@ export function SignIn({ setAccessToken }: ISignInProps) {
   };
 
   return (
-    <Row className='mt-5'>
-      <Col>
+    <Row className='w-100 mt-3'>
+      <AuthContainer>
         <h2 className='text-center mb-4'>{isPasswordSignin ? 'Sign in with password' : 'Sign in with passkey'}</h2>
 
         <Form onSubmit={isPasswordSignin ? passwordSignIn : passkeySignIn}>
@@ -65,7 +66,7 @@ export function SignIn({ setAccessToken }: ISignInProps) {
             {isPasswordSignin ? 'passkey' : 'password'}
           </Link>
         </p>
-      </Col>
+      </AuthContainer>
     </Row>
   );
 }

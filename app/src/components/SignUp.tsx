@@ -1,7 +1,8 @@
 import { FormEvent, useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Container, Form, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { signUpUser } from '../cognito';
+import { AuthContainer } from './AuthContainer';
 
 export function SignUp() {
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ export function SignUp() {
   };
 
   return (
-    <Row className='mt-5'>
-      <Col>
+    <Row className='w-100 mt-3'>
+      <AuthContainer>
         <h2 className='text-center mb-4'>Sign up a new user</h2>
 
         <Form onSubmit={signUp}>
@@ -42,7 +43,7 @@ export function SignUp() {
             </Button>
           </Container>
         </Form>
-      </Col>
+      </AuthContainer>
     </Row>
   );
 }
