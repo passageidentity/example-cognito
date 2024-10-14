@@ -16,7 +16,7 @@ export function InfoPanel() {
         <p className='fs-6'>Be sure to try adding a passkey and signing in with it!</p>
         <p className='fs-6'>
           For more information, check out our{' '}
-          <a href='https://docs.passage.id/docs/guides/passkey-flex/aws-cognito'>guide</a>.
+          <a href='https://docs.passage.id/docs/guides/passkey-flex/integration-guides/aws-cognito'>guide</a>.
         </p>
       </Col>
     </Row>

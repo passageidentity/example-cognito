@@ -12,7 +12,7 @@ we can add additional steps to Cognito's authentication process.
 
 # Getting started
 
-Follow the official guide to setup Passage and AWS. Once you're ready, run the server and app!
+Follow the official [guide](https://docs.passage.id/docs/guides/passkey-flex/integration-guides/aws-cognito) to setup Passage and AWS. Once you're ready, run the server and app!
 
 Install the dependencies
 
